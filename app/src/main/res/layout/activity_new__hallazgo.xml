@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".New_Finding"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ocurrenciaNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/ocurNum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/et_ocurrenciaNewHallazgo"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:hint="@string/ocurrenciaNum"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/tv_ocurrenciaNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_transectaNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="#Trans" />
+
+    <TextView
+        android:id="@+id/tv_muestreoNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_transectaNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="#Muest." />
+
+    <TextView
+        android:id="@+id/tv_tpOcur1NewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tp_ocur1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_ocurrenciaNewHallazgo" />
+
+    <Spinner
+        android:id="@+id/sp_tipoOcurr1NewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tpOcur1NewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_tpOcur2NewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/tp_ocur2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_tpOcur1NewHallazgo"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo" />
+
+    <Spinner
+        android:id="@+id/sp_tipoOcurr2NewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tpOcur2NewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_concCarcNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/conc_carc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_tipoOcurr1NewHallazgo" />
+
+    <EditText
+        android:id="@+id/et_concCarcNewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/conc_carc"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_concCarcNewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_ambInmedNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/ambiente_inmediato"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_tipoOcurr2NewHallazgo" />
+
+    <EditText
+        android:id="@+id/et_ambienteInmNewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/ambiente_inmediato"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ambInmedNewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_posicionNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/posicion_hallazgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_concCarcNewHallazgo" />
+
+    <Spinner
+        android:id="@+id/sp_posicionNewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_posicionNewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_orientacNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/orientacion_agua"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/et_ambienteInmNewHallazgo" />
+
+    <Spinner
+        android:id="@+id/sp_orientacionNewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orientacNewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_taxonNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/taxon_hallazgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_posicionNewHallazgo" />
+
+    <Spinner
+        android:id="@+id/sp_taxonNewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_taxonNewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_taxonTamanioNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tamanio_taxon"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/sp_orientacionNewHallazgo" />
+
+    <Spinner
+        android:id="@+id/sp_taxonTamNewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineNewHallazgo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_taxonTamanioNewHallazgo" />
+
+    <TextView
+        android:id="@+id/tv_observaNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/observaciones_hallazgo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_taxonNewHallazgo" />
+
+    <EditText
+        android:id="@+id/et_observaNewHallazgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/observaciones_hallazgo"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_observaNewHallazgo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineNewHallazgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

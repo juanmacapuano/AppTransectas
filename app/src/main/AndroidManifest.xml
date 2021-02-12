@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.transectas">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeNoActionBar">
+        <activity android:name=".Activity_about"></activity>
+        <activity android:name=".New_Transect" />
+        <activity android:name=".Activity_item_project" />
+        <activity android:name=".Item_Transect" />
+        <activity android:name=".ListSamplings" />
+        <activity android:name=".ListFindings" />
+        <activity android:name=".New_Finding" />
+        <activity android:name=".Item_Finding" />
+        <activity
+            android:name=".dialogos.TabsSampling"
+            android:label="@string/title_activity_tabs_muestreo"
+            android:theme="@style/AppThemeNoActionBar.NoActionBar" />
+        <activity
+            android:name=".Add_Transect"
+            android:label="@string/title_activity_add__transecta"
+            android:theme="@style/AppThemeNoActionBar.NoActionBar" />
+        <activity android:name=".Activity_add_project" />
+        <activity
+            android:name=".ProjectActivity"
+            android:label="@string/title_activity_proyecto"
+            android:theme="@style/AppThemeNoActionBar.NoActionBar" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.transectas.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".New_Transect"
+            android:foregroundServiceType="location">
+
+            <!-- Any inner elements would go here. -->
+        </service>
+    </application>
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>

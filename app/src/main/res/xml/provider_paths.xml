@@ -1,0 +1,9 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path
+        name="data"
+        path="."/>
+
+    <external-path
+        name="AppTransectasImages"
+        path="Android/data/com.example.transectas/files/TransectPhotos" />
+</paths>
