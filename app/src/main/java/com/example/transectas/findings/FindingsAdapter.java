@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.findings;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.example.transectas.R;
 import com.example.transectas.data.Hallazgos;
 
 import java.util.ArrayList;
@@ -51,7 +52,7 @@ public class FindingsAdapter extends RecyclerView.Adapter<FindingsAdapter.Hallaz
     /**
      * Associates a list of hallazgos with this adapter
      */
-    void setHallazgos(List<Hallazgos> hallazgos) {
+    public void setHallazgos(List<Hallazgos> hallazgos) {
         mHallazgos = hallazgos;
         listaHallazgosCompleta = new ArrayList<>(mHallazgos);
         notifyDataSetChanged();

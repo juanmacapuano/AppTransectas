@@ -17,9 +17,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.example.transectas.AppViewModel;
-import com.example.transectas.Item_Transect;
-import com.example.transectas.ListFindings;
-import com.example.transectas.ListSamplings;
+import com.example.transectas.findings.ListFindings;
 import com.example.transectas.R;
 import com.example.transectas.data.Muestreos;
 import com.example.transectas.data.Valores;

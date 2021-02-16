@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.projects;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.data.Proyectos;
 import com.example.transectas.data.Transectas;
 import com.example.transectas.dialogos.DialogoAddItemFragment;

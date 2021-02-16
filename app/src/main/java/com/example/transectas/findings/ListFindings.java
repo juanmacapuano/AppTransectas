@@ -1,14 +1,16 @@
-package com.example.transectas;
+package com.example.transectas.findings;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.data.Hallazgos;
 import com.example.transectas.data.HallazgosMuestreos;
 import com.example.transectas.dialogos.DialogoAddItemFragment;
@@ -18,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;

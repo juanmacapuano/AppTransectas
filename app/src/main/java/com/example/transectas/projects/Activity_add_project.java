@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.projects;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,15 +12,17 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.dialogos.DatePickerFragment;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 
-import static com.example.transectas.Activity_item_project.DATE_UPDATE_PROJECT_ITEM;
-import static com.example.transectas.Activity_item_project.NAME_UPDATE_PROJECT_ITEM;
-import static com.example.transectas.Activity_item_project.PROJECT_DATA_ID_ITEM;
-import static com.example.transectas.Activity_item_project.LOCATION_UPDATE_PROJECT_ITEM;
+import static com.example.transectas.projects.Activity_item_project.DATE_UPDATE_PROJECT_ITEM;
+import static com.example.transectas.projects.Activity_item_project.NAME_UPDATE_PROJECT_ITEM;
+import static com.example.transectas.projects.Activity_item_project.PROJECT_DATA_ID_ITEM;
+import static com.example.transectas.projects.Activity_item_project.LOCATION_UPDATE_PROJECT_ITEM;
 
 public class Activity_add_project extends BaseActivity {
 

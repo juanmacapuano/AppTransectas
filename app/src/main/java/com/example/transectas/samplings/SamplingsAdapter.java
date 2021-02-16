@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.samplings;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.example.transectas.R;
 import com.example.transectas.data.Muestreos;
 
 import java.util.ArrayList;
@@ -51,7 +52,7 @@ public class SamplingsAdapter extends RecyclerView.Adapter<SamplingsAdapter.Samp
     /**
      * Associates a list of muestreos with this adapter
      */
-    void setMuestreos(List<Muestreos> muestreos) {
+    public void setMuestreos(List<Muestreos> muestreos) {
         mSamplings = muestreos;
         listSamplingComplete = new ArrayList<>(mSamplings);
         notifyDataSetChanged();

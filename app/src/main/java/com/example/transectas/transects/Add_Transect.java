@@ -1,14 +1,17 @@
-package com.example.transectas;
+package com.example.transectas.transects;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.data.Transectas;
 import com.example.transectas.data.TransectasProyectos;
 import com.example.transectas.dialogos.DialogoAddItemFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;

@@ -1,10 +1,8 @@
-package com.example.transectas;
+package com.example.transectas.findings;
 
 import android.content.Intent;
-import android.os.BadParcelableException;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,33 +14,32 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.data.Valores;
 import com.example.transectas.dialogos.DialogoAddItemFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 
-import static com.example.transectas.Add_Transect.TRANSECTA_DATA_ID;
-import static com.example.transectas.Item_Finding.AMBIENTE_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.CONCARC_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.FOTOS_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.UPDATE_HALLAZGO_ACTIVITY_REQUEST_CODE;
-import static com.example.transectas.ListFindings.HALLAZGO_DATA_ID;
-import static com.example.transectas.Item_Finding.OBSERVACIONES_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.OCURRENCIA_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.ORIENTACION_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.POSICION_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.TAXONTAMANIO_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.TAXON_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.TIPOOCUR1_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.TIPOOCUR2_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.TRANSECTA_UPDATE_HALLAZGO_ITEM;
-import static com.example.transectas.Item_Finding.MUESTREO_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.AMBIENTE_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.CONCARC_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.UPDATE_HALLAZGO_ACTIVITY_REQUEST_CODE;
+import static com.example.transectas.findings.ListFindings.HALLAZGO_DATA_ID;
+import static com.example.transectas.findings.Item_Finding.OBSERVACIONES_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.OCURRENCIA_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.ORIENTACION_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.POSICION_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.TAXONTAMANIO_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.TAXON_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.TIPOOCUR1_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.TIPOOCUR2_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.TRANSECTA_UPDATE_HALLAZGO_ITEM;
+import static com.example.transectas.findings.Item_Finding.MUESTREO_UPDATE_HALLAZGO_ITEM;
 
 
 public class New_Finding extends BaseActivity {

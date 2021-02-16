@@ -40,7 +40,7 @@ public class AppViewModel extends AndroidViewModel {
         mRepository.updateProyecto(_project);
     }
 
-    LiveData<List<Proyectos>> getAllProjector() {
+    public LiveData<List<Proyectos>> getAllProjector() {
         return mAllProjects;
     }
 

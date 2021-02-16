@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.projects;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.transectas.transects.Add_Transect;
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.data.Proyectos;
 import com.example.transectas.dialogos.DatePickerFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,10 +21,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 
-import static com.example.transectas.ProjectActivity.PROJECT_DATA_ID;
-import static com.example.transectas.ProjectActivity.NAME_UPDATE_PROJECT;
-import static com.example.transectas.ProjectActivity.LOCATION_UPDATE_PROJECT;
-import static com.example.transectas.ProjectActivity.DATE_UPDATE_PROJECT;
+import static com.example.transectas.projects.ProjectActivity.PROJECT_DATA_ID;
+import static com.example.transectas.projects.ProjectActivity.NAME_UPDATE_PROJECT;
+import static com.example.transectas.projects.ProjectActivity.LOCATION_UPDATE_PROJECT;
+import static com.example.transectas.projects.ProjectActivity.DATE_UPDATE_PROJECT;
 
 public class Activity_item_project extends BaseActivity {
 

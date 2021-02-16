@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ic_launcher_background"
-    tools:context=".New_Transect">
+    tools:context=".transects.New_Transect">
 
     <ScrollView
         android:layout_width="match_parent"

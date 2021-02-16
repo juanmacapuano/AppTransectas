@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.transects;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +12,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.samplings.ListSamplings;
+import com.example.transectas.R;
 import com.example.transectas.data.Transectas;
 import com.example.transectas.data.Valores;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,25 +24,24 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 
-import static com.example.transectas.Add_Transect.WIDTH_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.DESCRIPTION_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.DATE_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.GPS_DESTINATION_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.GPS_DESTINATIONS_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.GPS_ORIGIN_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.GPS_ORIGINS_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.LONGITUDE_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.NUMBER_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.OPERATOR_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.CONTEXTAMB_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.COURSE_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.OBSERVATIONS_UPDATE_TRANSECT;
-import static com.example.transectas.Add_Transect.TRANSECTA_DATA_ID;
-import static com.example.transectas.Add_Transect.PHOTOS_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.WIDTH_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.DESCRIPTION_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.DATE_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.GPS_DESTINATION_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.GPS_DESTINATIONS_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.GPS_ORIGIN_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.GPS_ORIGINS_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.LONGITUDE_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.NUMBER_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.OPERATOR_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.CONTEXTAMB_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.COURSE_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.OBSERVATIONS_UPDATE_TRANSECT;
+import static com.example.transectas.transects.Add_Transect.TRANSECTA_DATA_ID;
+import static com.example.transectas.transects.Add_Transect.PHOTOS_UPDATE_TRANSECT;
 
 public class Item_Transect extends BaseActivity {
 

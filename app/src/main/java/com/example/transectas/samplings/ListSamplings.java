@@ -1,15 +1,18 @@
-package com.example.transectas;
+package com.example.transectas.samplings;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.data.Muestreos;
 import com.example.transectas.data.MuestreosTransectas;
 import com.example.transectas.dialogos.DialogoAddItemFragment;
 import com.example.transectas.dialogos.TabsSampling;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -26,7 +29,7 @@ import java.util.List;
 
 import static com.example.transectas.dialogos.TabsSampling.SAMPLING_REPLY_ID;
 
-public class ListSamplings extends BaseActivity{
+public class ListSamplings extends BaseActivity {
 
     private AppViewModel mViewModel;
     private SamplingsAdapter adapter;

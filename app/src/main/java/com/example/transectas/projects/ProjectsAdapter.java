@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.projects;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.example.transectas.R;
 import com.example.transectas.data.Proyectos;
 
 import java.util.ArrayList;
@@ -54,7 +55,7 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
     /**
      * Associates a list of words with this adapter
      */
-    void setProyectos(List<Proyectos> proyectos) {
+    public void setProyectos(List<Proyectos> proyectos) {
         mProjects = proyectos;
         listCompleteProject = new ArrayList<>(mProjects);
         notifyDataSetChanged();

@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.transects;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
-import com.example.transectas.data.Proyectos;
+import com.example.transectas.R;
 import com.example.transectas.data.Transectas;
 
 import java.util.ArrayList;
@@ -54,7 +54,7 @@ public class TransectasAdapter extends RecyclerView.Adapter<TransectasAdapter.Tr
     /**
      * Associates a list of transectas with this adapter
      */
-    void setTransectas(List<Transectas> transectas) {
+    public void setTransectas(List<Transectas> transectas) {
         mTransectas = transectas;
         listaTransectasCompleta = new ArrayList<>(mTransectas);
         notifyDataSetChanged();

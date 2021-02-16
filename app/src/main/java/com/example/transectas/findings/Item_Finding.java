@@ -1,4 +1,4 @@
-package com.example.transectas;
+package com.example.transectas.findings;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.transectas.AppViewModel;
+import com.example.transectas.BaseActivity;
+import com.example.transectas.R;
 import com.example.transectas.data.Hallazgos;
 import com.example.transectas.data.Valores;
 
@@ -21,18 +24,18 @@ import java.util.List;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 
-import static com.example.transectas.ListFindings.AMBIENTEINMED_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.ANALISTA_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.CONCCARC_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.HALLAZGO_DATA_ID;
-import static com.example.transectas.ListFindings.OBSERVACIONES_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.OCURRENCIA_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.ORIENTACIONAGUA_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.POSICION_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.TAMANIOTAXON_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.TAXON_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.TIPOOCURRENCIA1_UPDATE_HALLAZGO;
-import static com.example.transectas.ListFindings.TIPOOCURRENCIA2_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.AMBIENTEINMED_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.ANALISTA_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.CONCCARC_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.HALLAZGO_DATA_ID;
+import static com.example.transectas.findings.ListFindings.OBSERVACIONES_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.OCURRENCIA_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.ORIENTACIONAGUA_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.POSICION_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.TAMANIOTAXON_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.TAXON_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.TIPOOCURRENCIA1_UPDATE_HALLAZGO;
+import static com.example.transectas.findings.ListFindings.TIPOOCURRENCIA2_UPDATE_HALLAZGO;
 
 
 public class Item_Finding extends BaseActivity {
