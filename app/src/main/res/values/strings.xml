@@ -206,5 +206,10 @@
     <string name="observaciones_hallazgo">Observaciones</string>
     <string name="ocurNum">#Ocur:</string>
     <string name="Nro">\"Nro: \"</string>
+    <string name="new_project_onboard">Crea un nuevo proyecto</string>
+    <string name="new_transect_onboard">Agrega Transectas al proyecto creado</string>
+    <string name="new_sampling_onboard">Agrega Muestreos a la Transecta creada</string>
+    <string name="new_finding_onboard">Agrega Hallazgos al Muestreo creado</string>
+    <string name="starter">Comenzar</string>
 
 </resources>

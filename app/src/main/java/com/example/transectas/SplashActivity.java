@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.transectas.onboardingViewPager.ActivityOnboardingScreen;
 import com.example.transectas.projects.ProjectActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -34,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this, ProjectActivity.class);
+            Intent intent = new Intent(SplashActivity.this, ActivityOnboardingScreen.class);
             startActivity(intent);
             finish();
         },4000);

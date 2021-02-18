@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
-        <activity android:name=".Activity_about"></activity>
+        <activity android:name=".onboardingViewPager.ActivityOnboardingScreen"></activity>
+        <activity android:name=".Activity_about" />
         <activity android:name=".transects.New_Transect" />
         <activity android:name=".projects.Activity_item_project" />
         <activity android:name=".transects.Item_Transect" />
@@ -60,15 +61,15 @@
             <!-- Any inner elements would go here. -->
         </service>
     </application>
+
     <uses-feature
         android:name="android.hardware.camera2"
         android:required="false" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>
