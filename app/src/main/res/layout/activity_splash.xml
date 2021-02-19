@@ -25,7 +25,7 @@
         android:fontFamily="@font/capriola"
         android:text="Desarrollado por Juan Manuel Capuano"
         android:textColor="@color/colorWhiteApp"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

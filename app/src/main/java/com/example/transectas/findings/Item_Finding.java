@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -17,6 +18,7 @@ import com.example.transectas.BaseActivity;
 import com.example.transectas.R;
 import com.example.transectas.data.Hallazgos;
 import com.example.transectas.data.Valores;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +44,7 @@ public class Item_Finding extends BaseActivity {
 
     private EditText et_ocurrenciaItemHallazgo, et_concCarcItemHallazgo, et_ambienteInmItemHallazgo, et_observaItemHallazgo;
     private TextView tv_transectaItemHallazgo, tv_muestreoItemHallazgo;
+    private FloatingActionButton fa_action_element_housing, fa_add_element_housing, fa_add_housing;
     private AppViewModel mViewModel;
     private long itemTipoOc1SelectedItem, itemTipoOc2SelectedItem, itemPosicionSelectedItem, itemOrientacionSelectedItem,
     itemTaxonSelectedItem, itemTaxonTamanioSelectedItem;
@@ -52,6 +55,7 @@ public class Item_Finding extends BaseActivity {
     private long idHallazgoInsert;
     private long MUESTREO_ID = -1;
     private long TRANSECTA_ID = -1;
+    private Boolean isFABOpen = false;
 
     public static final int UPDATE_HALLAZGO_ACTIVITY_REQUEST_CODE = 2;
 
@@ -239,8 +243,35 @@ public class Item_Finding extends BaseActivity {
         sp_taxonTamItemHallazgo = findViewById(R.id.sp_taxonTamItemHallazgo);
         et_observaItemHallazgo = findViewById(R.id.et_observaItemHallazgo);
 
+        fa_action_element_housing = findViewById(R.id.fa_action_element_housing);
+        fa_add_element_housing = findViewById(R.id.fa_add_element_housing);
+        fa_add_housing = findViewById(R.id.fa_add_housing);
+
+        fa_action_element_housing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!isFABOpen){
+                    showFABMenu();
+                }else{
+                    closeFABMenu();
+                }
+            }
+        });
+
         cargarSpinners();
 
+    }
+
+    private void showFABMenu(){
+        isFABOpen=true;
+        fa_add_element_housing.animate().translationY(getResources().getDimension(R.dimen.standard_105));
+        fa_add_housing.animate().translationY(getResources().getDimension(R.dimen.standard_55));
+    }
+
+    private void closeFABMenu(){
+        isFABOpen=false;
+        fa_add_element_housing.animate().translationY(0);
+        fa_add_housing.animate().translationY(0);
     }
 
     private void cargarSpinners() {

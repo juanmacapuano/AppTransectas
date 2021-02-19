@@ -59,6 +59,11 @@ public class Activity_add_project extends BaseActivity {
             }
             if (!locationProject.isEmpty()) {
                 et_locationProject.setText(locationProject);
+                et_locationProject.setFocusable(false);
+                et_locationProject.setEnabled(false);
+                et_locationProject.setCursorVisible(false);
+                et_locationProject.setKeyListener(null);
+                et_locationProject.setBackgroundColor(Color.TRANSPARENT);
             }
             if (!dateProject.isEmpty()) {
                 d_dateCreated.setText(dateProject);
