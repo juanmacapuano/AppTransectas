@@ -2,12 +2,15 @@ package com.example.transectas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.transectas.onboardingViewPager.ActivityOnboardingScreen;
@@ -35,9 +38,21 @@ public class SplashActivity extends AppCompatActivity {
 
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this, ActivityOnboardingScreen.class);
-            startActivity(intent);
-            finish();
+            if (!onBoardingFinished()) {
+                Intent intent = new Intent(SplashActivity.this, ActivityOnboardingScreen.class);
+                startActivity(intent);
+                finish();
+            }else {
+                Intent intent = new Intent(SplashActivity.this, ProjectActivity.class);
+                startActivity(intent);
+                finish();
+            }
+
         },4000);
+    }
+
+    private Boolean onBoardingFinished() {
+        SharedPreferences sharedPreferences = getSharedPreferences("onBoarding", Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean("Finished", false);
     }
 }
